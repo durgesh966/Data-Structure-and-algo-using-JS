@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linked list in Javascript</title>
+    <script>
+        class LinkedList {
+            constructor(data) {
+                this.head = {
+                    data: data,
+                    next: null
+                };
+                this.tail = this.head;
+                this.size = 1;
+            }
+            addDatainLast(newData) {
+                const newNode = {
+                    data: newData,
+                    next: null
+                };
+                this.tail.next = newNode;
+                this.tail = newNode;
+                this.size += 1;
+            }
+        }
+
+        let list = new LinkedList(100);
+        list.addDatainLast(200);
+        list.addDatainLast(300);
+        list.addDatainLast(400);
+        list.addDatainLast(500);
+        list.addDatainLast(600);
+
+        console.log(list);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

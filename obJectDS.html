@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Data-Structure in JacaScript</title>
+    <script>
+      let data = {
+        name: "Durgesh",
+        surName: "Bisen",
+        age: 21,
+        city: "Khandwa",
+      };
+      // console.log(data);
+      // Print Object
+
+      //   console.log(`Hello Sir I'am ${data.name} ${data.surName} i live in ${data.city} and i'm ${data.age} year old`);
+      //   Hello Sir I'am Durgesh Bisen i live in Khandwa and i'm 21 year old
+
+      // add new data in Object
+      data.Number = 9669923132;
+
+      // console.log(data);
+      // console.log(`Hello Sir My Number is ${data.Number}`);
+      // output :- {name: 'Durgesh', surName: 'Bisen', age: 21, city: 'Khandwa', Number: 9669923132}Number: 9669923132age: 21city: "Khandwa"name: "Durgesh"surName: "Bisen"[[Prototype]]: Object
+      // obJectDS.html:23 Hello Sir My Number is 9669923132
+
+      //   Update data in Object
+      //   data.age = 20;
+      //   console.log(`My Age: ${data.age}`);
+      //   My Age: 20
+
+      //   delete data in object
+      // delete data.age;
+      // console.log(`My Age: ${data.age}`); // undefined
+      // console.log(data); // {name: 'Durgesh', surName: 'Bisen', city: 'Khandwa', Number: 9669923132}
+
+      // Use Loop In  Object
+      //   1 forIn LOOP
+      //   for (let x in data) {
+      // console.log(x);
+      // name
+      // surName
+      //  age
+      //  city
+      //  Number
+
+      // console.log(data[x]);
+      // Durgesh;
+      // Bisen;
+      // 21;
+      // Khandwa;
+      // 9669923132;
+      //   }
+
+      //   console.log(Object.keys(data)); //(5) ['name', 'surName', 'age', 'city', 'Number']
+
+      //   console.log(Object.values(data)); //(5) ['Durgesh', 'Bisen', 21, 'Khandwa', 9669923132]
+
+      // console.log(Object.entries(data));
+      // (5) [Array(2), Array(2), Array(2), Array(2), Array(2)]
+      // 0 : (2) ['name', 'Durgesh']
+      // 1 : (2) ['surName', 'Bisen']
+      // 2 : (2) ['age', 21]
+      // 3 : (2) ['city', 'Khandwa']
+      // 4 : (2) ['Number', 9669923132]
+      // length : 5
+    </script>
+  </head>
+  <body></body>
+</html>

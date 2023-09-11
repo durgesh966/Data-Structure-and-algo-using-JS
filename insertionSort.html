@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sorting</title>
+</head>
+
+<body>
+    <!------------------ Javascript ------------------->
+    <script>
+        let arr = [45, 64, 3, 56, 36, 24, 65, 87, 34, 2, 5, 8, 9];
+        function insertionSort(data) {
+            let i;
+            let j;
+            let temp;
+            // console.log(temp);
+            for (i = 1; i < data.length; i++) {
+                temp = data[i];
+                j = i - 1
+                while (j >= 0 && data[j] > temp) {
+                    data[j + 1] = data[j];
+                    j = j - 1;
+                }
+                data[j + 1] = temp;
+            }
+        }
+
+        insertionSort(arr);
+        console.warn(arr);
+    </script>
+</body>
+
+</html>

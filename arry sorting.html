@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array sorting</title>
+    <script>
+
+        // let data = [34, 353, 5, 5, 5, 535, 35, 45, 43, 55, 54, 34, 5, 5, 543];
+
+        // for (i = 0; i < data.length; i++) {
+
+        //     for (j = 0; j < data.length; j++) {
+        //         document.write('<br>',data);
+        //         if (data[j] > data[j + 1]) {
+        //            let hello = data[j];
+        //            data[j] = data[j + 1];
+        //            data[j + 1] = hello;
+        //         }
+        //         document.write('<br>', data);
+        //     }
+        // }
+        function sortElement() {
+            let data = [23,67,54,67,45,89,75,34];
+            for (i = 0; i < data.length; i++) {
+                for (j = 0; j < data.length; j++) {
+                    document.write('<br>',data);
+                    if (data[j] > data[j + 1]) {
+                        let temp = data[j];
+                        data[j] = data[j + 1];
+                        data[j + 1] = temp;
+                        
+                    }
+                }
+                
+            }
+             
+        }
+        
+        sortElement();
+        
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="entet your position">
+    <button onclick="sortElement()">short now</button>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximum Occurence</title>
+    <script>
+      let word = "DurgeshddddddBisen";
+      let strObj = {};
+      let maxKey = " ";
+      for (let i = 0; i < word.length; i++) {
+        let defKey = word[i];
+        if (!strObj[defKey]) {
+          strObj[defKey] = 0;
+        }
+        strObj[defKey]++;
+        if (maxKey == " " || strObj[defKey]>strObj[maxKey]) {
+          maxKey = defKey;
+        }
+      }
+      console.log(maxKey);
+      console.log(strObj);
+    </script>
+  </head>
+  <body></body>
+</html>

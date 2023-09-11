@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front and Rear operations Queue</title>
+    <!-- CSS -->
+    <style>
+        body {
+            background: wheat;
+        }
+
+        .container {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            /* Box model properties */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            /* Text properties */
+            font-size: 16px;
+            color: #333;
+
+            /* Background and foreground colors */
+            background-color: #fff;
+            /* You can also specify a transparent background-color to make it transparent */
+            /* background-color: transparent; */
+
+            /* Width and height */
+            width: 200px;
+            height: 30px;
+
+            /* Placeholder text */
+            ::placeholder {
+                color: #999;
+                font-style: italic;
+            }
+
+            /* Hover and focus styles */
+            &:hover {
+                border-color: #666;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+
+        .button {
+            /* Box model properties */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+
+            /* Text properties */
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+
+            /* Background and foreground colors */
+            background-color: #007bff;
+            /* You can also use gradient or other background styles */
+            /* background: linear-gradient(to bottom, #007bff, #0056b3); */
+
+            /* Hover and focus styles */
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            /* Box shadow */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        #result {
+            /* Box model properties */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 20vw;
+            height: 10vh;
+            /* Text properties */
+            font-size: 46px;
+            color: #333;
+
+            /* Background and foreground colors */
+            background-color: #f5f5f5;
+            /* Center text */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="result"></h1>
+        <input type="text" placeholder="Enter Your data to store in Queue" id="text">
+        <br>
+        <br>
+        <button class="button" onclick="enqueWithButton()">EnQueue</button>
+        <button class="button" onclick="deQueueWithButton()">DeQueue</button>
+        <br>
+        <br>
+        <button class="button" onclick="frontVal()">Front Value</button>
+        <button class="button" onclick="lastVal()">Last Value</button>
+        <br>
+        <br>
+        <button class="button" onclick="output()">Output</button>
+    </div>
+
+    <!------------------------------- JavaScript script started ----------------------------------->
+
+    <script>
+        var outputElement;
+        var queue = [];
+        var currentSize = queue.length;
+        var max = 5;
+
+        window.onload = function () {
+            outputElement = document.getElementById("result");
+        }
+
+        function enqueWithButton() {
+            var newVal = document.getElementById("text").value;
+            if (currentSize < max) {
+                queue.push(newVal);
+                currentSize += 1;
+            } else {
+                alert("Queue is full");
+            }
+        }
+
+        function deQueueWithButton() {
+            if (currentSize > 0) {
+                queue.shift();
+                currentSize -= 1;
+            } else {
+                alert("Queue is empty");
+            }
+        }
+
+        function frontVal() {
+            if (currentSize > 0) {
+                outputElement.innerHTML = queue[0];
+            } else {
+                alert("Queue is empty");
+            }
+        }
+
+        function lastVal() {
+            if (currentSize > 0) {
+                outputElement.innerHTML = queue[currentSize - 1];
+            } else {
+                alert("Queue is empty");
+            }
+        }
+
+        function output() {
+            outputElement.innerHTML = queue.join(", ");
+        }
+    </script>
+</body>
+
+</html>

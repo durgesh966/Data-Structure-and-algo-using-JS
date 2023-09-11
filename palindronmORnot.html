@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome or not</title>
+    <script>
+      function palindrome(data) {
+        let start = 0;
+        let end = data.length - 1;
+        while (start < end) {
+          if (data[start] != data[end]) {
+            return false;
+          }
+          start++;
+          end--;
+        }
+        return true;
+      }
+
+      let strg = "levelheet";
+      console.log(palindrome(strg));
+
+      // function palindrome(data) {
+      //   let start = 0;
+      //   let end = data.length - 1;
+
+      //   while (start < end) {
+      //     if (data[start] !== data[end]) {
+      //       return false;
+      //     }
+      //     start++;
+      //     end--;
+      //   }
+      //   return true; // Return true when the whole loop has been executed without finding any mismatches.
+      // }
+
+      // let strg = "levela";
+      // console.log(palindrome(strg));
+    </script>
+  </head>
+  <body></body>
+</html>

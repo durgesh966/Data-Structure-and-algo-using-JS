@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sorting</title>
+    <script>
+
+        let number = [987, 76, 5, 54, 65, 767, 867, 97, 564, 56, 435, 65, 755, 897];
+        function sortAlgo(sort) {
+            let endpoints;
+            for (let i = 0; i < sort.length; i++) {
+                endpoints = i;
+                for (let j = i + 1; j < sort.length; j++) {
+                    if (sort[j] < sort[endpoints]) {
+                        endpoints = j;
+                    }
+                }
+
+                let some = sort[endpoints];
+                sort[endpoints] = sort[i];
+                sort[i] = some;
+            }
+        }
+        sortAlgo(number);
+        console.log(number);
+
+// ------------------ second method ----------------
+
+// let array = [23, 56, 34, 7, 55, 67, 87, 76, 78, 64, 70];
+// function selectSort(data) {
+//     for (let i = 0; i < data.length - 1; i++) {
+//         let minIndex = i; // Assume the current index is the minimum
+
+//         // Find the index of the minimum element in the remaining unsorted part
+//         for (let j = i + 1; j < data.length; j++) {
+//             if (data[j] < data[minIndex]) {
+//                 minIndex = j;
+//             }
+//         }
+
+//         // Swap the found minimum element with the first element
+//         if (minIndex !== i) {
+//             let temp = data[minIndex];
+//             data[minIndex] = data[i];
+//             data[i] = temp;
+//         }
+//     }
+// }
+
+// selectSort(array);
+// console.log(array);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

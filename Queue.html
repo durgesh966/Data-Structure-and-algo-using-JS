@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue-Data-Structure</title>
+    <script>
+        let Queue = [];
+        let currentSize = Queue.length;
+        maxSize = 5;
+
+        function enqueue(newValue) {
+            if (currentSize >= maxSize) {
+                alert('Queue is full');
+            } else {
+                Queue[currentSize] = newValue;
+                currentSize += 1;
+            }
+        }
+
+        function deQueue() {
+            if (currentSize > 0) {
+                for (let i = 0; i < Queue.length; i++) {
+                    Queue[i] = Queue[i + 1];
+                }
+                currentSize -= 1;
+                Queue.length = currentSize;
+            } else {
+                alert("Queue is already empty");
+            }
+        }
+
+        function display() {
+            document.write(Queue);
+        }
+
+
+        enqueue();
+        display();
+        deQueue();
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

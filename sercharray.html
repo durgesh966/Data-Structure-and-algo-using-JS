@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serch array</title>
+    <script>
+
+        // let data = [20,40,60,30,345,8,6,445,455,5435,635,5653,543,5,53,5,35,5,56,7,68,,35,6,6];
+        // let items = 5435;
+        // let index = undefined;
+
+        // for(i=0; i<data.length-1; i++)
+        // if(data[i]===items){
+        //     index = i;
+        //     break;
+        // }
+        // document.write(index);
+        // document.write("<br>",data.indexOf(60));
+        function searchElement() {
+            let data = [20, 40, 60, 30, 345, 8, 6, 445, 455, 5435, 635, 5653, 543, 5, 53, 5, 35, 5, 56, 7, 68, , 35, 6, 6];
+            let items = document.getElementById("search").value;
+            let index = undefined;
+
+            for (i = 0; i < data.length - 1; i++)
+                if (data[i] === parseInt(items)) {
+                    index = i;
+                    break;
+                }
+            document.write("<br>", index);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="enter new element">
+    <button onclick="searchElement()">Insert now</button>
+</body>
+
+</html>

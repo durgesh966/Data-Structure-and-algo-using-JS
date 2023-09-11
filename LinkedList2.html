@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked list add Traversing</title>
+    <script>
+        class linkedList {
+            constructor(data) {
+                this.head = {
+                    data: data,
+                    next: data
+                }
+                this.tail = this.head;
+                this.size = 1;
+            }
+
+            newNode(newdata) {
+                const Newnode = {
+                    data: newdata,
+                    next: null
+                }
+                this.tail.next = Newnode;
+                this.tail = Newnode;
+                this.size++;
+            };
+
+            treVarse() {
+                let counter = 0;
+                let currentNode = this.head;
+                while (counter < this.size) {
+                    console.warn(currentNode);
+                    currentNode = currentNode.next;
+                    counter++;
+                }
+            }
+        }
+        let list = new linkedList(100);
+        list.newNode(200);
+        list.newNode(300);
+        list.newNode(400);
+        list.newNode(500);
+        list.newNode(600);
+        list.newNode(700);
+        list.treVarse();
+
+        // console.log(list);
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

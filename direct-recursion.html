@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct recursion</title>
+    <script>
+        let students = 100;
+        let works = 0;
+
+        function working(x) {
+            if (x > 0) {
+                moreWork++
+                document.write("i have  " + " " + students + " " + "students" + " " + works );
+                moreWork(x);
+            } else {
+                document.write("i have no more students", works);
+            }
+        }
+
+        function moreWork(x) {
+            works++
+            working(x-5);
+        }
+        working(students);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

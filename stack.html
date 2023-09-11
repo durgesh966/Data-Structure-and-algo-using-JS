@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stack Data structure</title>
+    <script>
+       let data = [];
+       let currentsize = data.length;
+       max = 4;
+
+      function push(val){
+        if(currentsize >= max){
+        alert('your array size ib maxxxxxxxxx' + val);
+        }
+         data[currentsize] = val;
+         currentsize+=1;
+      }
+
+      function pop(){
+        if (currentsize>0){ 
+            currentsize-=1;
+            data.length = currentsize;
+            
+        } else{
+            console.alert('your array is empty');
+        }
+      }
+      
+      push(23);
+      push(23);
+      push(23);
+      push(23);
+      pop(23);
+      pop(23);
+      pop(23);
+
+      console.warn(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
